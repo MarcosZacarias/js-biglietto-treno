@@ -55,6 +55,8 @@ Creo un valore "_Biglietto minorenni_"
 
   - "_Biglietto minorenne_" = "_biglietto standard_" x "_sconto under 20_"
 
+Creo un valore "_Biglietto finale_"
+
 **SE** "_Età utente_" >= a 65
 
 - "_Biglietto finale_" = "_Biglietto scontato over 65_"
