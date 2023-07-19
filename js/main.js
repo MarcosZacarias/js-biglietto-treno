@@ -65,9 +65,7 @@ console.log(typeof discount);
 
 // Discount apply
 let discountApply;
-if (ageUtent >= 65) {
-  discountApply = ticketStandard * discount;
-} else if (ageUtent < 18) {
+if (ageUtent >= 65 || ageUtent < 18) {
   discountApply = ticketStandard * discount;
 } else {
   discountApply = 0;
