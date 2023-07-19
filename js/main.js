@@ -62,3 +62,11 @@ if (ageUtent >= 65) {
 ticketFinal;
 console.log("Biglietto Finale " + ticketFinal);
 console.log(typeof ticketFinal);
+
+// Ticket client
+const ticketClient = `
+<p>Prezzo biglietto finale: <b> € ${ticketFinal}</b></p>
+`;
+
+// PRINT TICKET CLIENT IN HTML WITH ID
+document.getElementById("ticketTrain").innerHTML = ticketClient;
