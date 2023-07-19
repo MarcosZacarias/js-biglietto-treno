@@ -14,6 +14,8 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 ## Istruzioni
 
+### Soluzione 1
+
 Chiedo all'utente i valori
 
 - Quanti km devi viaggiare
@@ -68,3 +70,55 @@ Creo un valore "_Biglietto finale_"
 **Altrimenti**
 
 - "_Biglietto finale_" = "_Biglietto standard_"
+
+### Soluzione 2
+
+Chiedo all'utente i valori
+
+- Quanti km devi viaggiare
+- Scrivi la tua età
+
+Creo valore "_Km inseriti dall'utente da viaggiare_":
+
+- equivale al valore di km indicato dall'utente
+
+Creo un valore "_Età utente_":
+
+- equivale all'età indicata dall'utente
+
+Dopo creo una costante:
+
+- Prezzo biglietto per Km = 0,21 €
+
+Creo un valore "_Biglietto standard_":
+
+- "_Prezzo biglietto per Km_" x "_Km inseriti dall'utente da viaggiare_"
+
+Creo un valore "_sconto_":
+
+- **SE** "_Età utente_" è >= a 65
+  - "_sconto_" = a 40%
+- **ALTRIMENTI SE** "_Età utente_" è < a 18
+  - "_sconto_" = a 20%
+- **ALTRIMENTI**
+  - "_sconto_" = a 0
+
+Creo un valore "_sconto applicato_":
+
+- **SE** "_Età utente_" è >= a 65 **O** "_Età utente_" è < a 18
+  - "_sconto applicato_" = "_Biglietto standard_" x "_sconto_"
+- **ALTRIMENTI**
+  - "_sconto applicato_" = "0"
+
+Creo un valore "_Biglietto finale_"
+
+- **SE** "_Età utente_" è >= a 65 **O** "_Età utente_" è < a 18
+  - "_Biglietto finale_" = "_Biglietto standard_" x "_sconto applicato_"
+- **ALTRIMENTI**
+  - "_Biglietto finale_" = "_Biglietto standard_"
+
+Creo un valore "_Biglietto cliente_"
+
+- "_Biglietto cliente_" = "_Biglietto finale_"
+
+Stampo all'utente il biglietto cliente
