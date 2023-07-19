@@ -54,10 +54,10 @@ console.log(typeof ticketUnder18);
 let ticketFinal;
 
 if (ageUtent >= 65) {
-  ticketFinal = ticketOver65;
+  ticketFinal = ticketOver65.toFixed(2);
 } else if (ageUtent < 18) {
-  ticketFinal = ticketUnder18;
-} else ticketFinal = ticketStandard;
+  ticketFinal = ticketUnder18.toFixed(2);
+} else ticketFinal = ticketStandard.toFixed(2);
 
 ticketFinal;
 console.log("Biglietto Finale " + ticketFinal);
