@@ -9,20 +9,42 @@ console.log("Età: " + ageUtent);
 
 // Price € x km
 const priceKm = 0.21;
-console.log(priceKm);
+console.log("Prezzo per Km " + priceKm);
 console.log(typeof priceKm);
 
 // Ticket standard
 let ticketStandard = priceKm * tripKm;
-console.log(ticketStandard);
+console.log("Biglietto standard " + ticketStandard);
 console.log(typeof ticketStandard);
 
 // Discount users over 65 years
 const discountOver65 = 0.4;
-console.log(discountOver65);
+console.log("Sconto Over 65 " + discountOver65);
 console.log(typeof discountOver65);
+
+// Ticket users over 65 years
+let ticketOver65;
+
+if (ageUtent >= 65) {
+  ticketOver65 = ticketStandard - ticketStandard * discountOver65;
+}
+
+ticketOver65;
+console.log("Biglietto Over 65 " + ticketOver65);
+console.log(typeof ticketOver65);
 
 // Discount users under 18 years
 const discountUnder18 = 0.2;
 console.log(discountUnder18);
 console.log(typeof discountUnder18);
+
+// Ticket users under 18 years
+let ticketUnder18;
+
+if (ageUtent < 18) {
+  ticketUnder18 = ticketStandard - ticketStandard * discountUnder18;
+}
+
+ticketUnder18;
+console.log("Biglietto Under 18 " + ticketUnder18);
+console.log(typeof ticketUnder18);
